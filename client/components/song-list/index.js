@@ -5,7 +5,7 @@ import { graphql  } from 'react-apollo';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import CircularProgress from 'material-ui/CircularProgress';
-import IconDelete from 'material-ui/svg-icons/content/inbox';
+import IconDelete from 'material-ui/svg-icons/action/delete';
 import Snackbar from 'material-ui/Snackbar';
 import {List, ListItem} from 'material-ui/List';
 
@@ -45,7 +45,7 @@ class SongList extends Component {
         const { data } = this.props;
 
         if (!data.songs) {
-            return <div className="song-list-container__nodata">No songs added</div>
+            return null;
         }
 
         return (

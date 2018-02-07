@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 
 import addLyricToSong from '../../../mutations/addLyricToSong';
+import fetchSong from '../../../queries/fetchSong';
 
 import './style.css';
 
@@ -24,7 +25,7 @@ class LyricCreate extends Component {
     }
 
     onSubmit() {
-        this.props.mutate({
+        this.props.addMutation({
             variables: {
                 content: this.state.content,
                 songId: this.props.songId
@@ -56,4 +57,4 @@ class LyricCreate extends Component {
     }
 }
  
-export default graphql(addLyricToSong)(LyricCreate);
+export default graphql(addLyricToSong, { name: 'addMutation' })(LyricCreate);

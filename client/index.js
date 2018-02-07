@@ -5,7 +5,9 @@ import { ApolloProvider } from 'react-apollo';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-const client = new ApolloClient({});
+const client = new ApolloClient({
+  dataIdFromObject: o => o.id
+});
 
 import SongList from './components/song-list';
 import SongCreate from './components/song-create';

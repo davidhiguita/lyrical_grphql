@@ -5,12 +5,15 @@
     padding: 5rem;
 }
 
-.songs-new-container__input-title {
-
-}
-
 .songs-new-container__fab {
     position: fixed;
     bottom: 32px;
     right: 32px;
+}
+
+.songs-new-container__back {
+    margin-top: 60px;
+    color: lightseagreen;
+    text-decoration: none;
+    cursor: pointer;
 }

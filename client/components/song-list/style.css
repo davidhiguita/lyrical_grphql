@@ -1,0 +1,25 @@
+.song-list-container {
+    border: solid 1px #000;
+    box-shadow: 5px 5px grey;
+    height: 85%;
+    margin:5% 100px;
+    overflow-y: auto;
+}
+
+.song-list-container__fab {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+}
+
+.song-list-container__loader {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-list-container__list__link {
+    color: #000;
+    text-decoration: none;
+}

@@ -1,0 +1,46 @@
+.song-detail-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.song-detail-container__navigator {
+    background-color: blue;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 1rem;
+}
+
+.song-detail-container__navigator a {
+    color: #FFF;
+    flex: 10%;
+    font-weight: bold;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.song-detail-container__navigator a:hover {
+    text-decoration: underline;
+}
+
+.song-detail-container__info {
+    display: flex;
+    flex: 90%;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.song-detail-container__info .song-detail-container__info-title {
+    flex: 10%;
+}
+
+.song-detail-container__info .song-detail-container__info-list {
+    flex: 70%;
+}
+
+.song-detail-container__info .song-detail-container__info-form {
+    flex: 20%;
+}

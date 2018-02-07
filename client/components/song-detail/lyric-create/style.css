@@ -1,0 +1,12 @@
+.lyric-create-container {
+    display: flex;
+    width: 60%;
+}
+
+.lyric-create-container__input {
+    flex: 80%;
+}
+
+.lyric-create-container__button {
+    flex: 20%;
+}

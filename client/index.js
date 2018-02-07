@@ -9,6 +9,7 @@ const client = new ApolloClient({});
 
 import SongList from './components/song-list';
 import SongCreate from './components/song-create';
+import SongDetail from './components/song-detail';
 
 const Root = () => {
   return (
@@ -19,6 +20,7 @@ const Root = () => {
               <IndexRoute component={SongList} />
               <Route path="/songs" component={SongList} />
               <Route path="/songs/new" component={SongCreate} />
+              <Route path="/songs/:id" component={SongDetail} />
           </Route>
         </Router>
       </MuiThemeProvider>

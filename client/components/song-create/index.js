@@ -6,6 +6,10 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import TextField from 'material-ui/TextField';
 
+import { hashHistory } from 'react-router';
+
+import fetchSongs from '../../queries/fetchSongs';
+
 import './style.css';
 
 class SongCreate extends Component {
@@ -28,8 +32,14 @@ class SongCreate extends Component {
         this.props.mutate({
             variables: {
                 title: this.state.title
-            }
-        });
+            },
+            refetchQueries: [{ query: fetchSongs }]
+        })
+            .then(() => {
+                this.setState({ title: '' });
+                hashHistory.push('/songs');
+            })
+            .catch(error => console.log(error));
     }
 
     render() {
@@ -42,6 +52,8 @@ class SongCreate extends Component {
                     onChange={this.handleChangeTitle}
                     value={this.state.title}
                 />
+
+                <a className="songs-new-container__back" onClick={() => hashHistory.push('/songs')}>View song's list</a>
 
                 <FloatingActionButton
                     className="songs-new-container__fab"

@@ -1,0 +1,7 @@
+.lyric-list-container {
+    border: solid 1px #000;
+    box-shadow: 5px 5px grey;
+    height: 45%;
+    margin:5% 100px;
+    overflow-y: auto;
+}
